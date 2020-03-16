@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="713.0" spacing="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zelosin.pack.Controllers.PrimeWindowController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="126.0" prefWidth="376.0">
+               <children>
+                  <Label text="Верхняя граница" />
+                  <TextField fx:id="dUpBorderField" prefWidth="420.0" />
+                  <Label text="Нижняя граница" />
+                  <TextField fx:id="dDownBorderField" />
+                  <Label text="Шаг" />
+                  <TextField fx:id="dAccuracyField" prefHeight="25.0" prefWidth="415.0" />
+               </children>
+            </VBox>
+            <ListView fx:id="dIPList" prefHeight="126.0" prefWidth="323.0" />
+         </children>
+      </HBox>
+      <TableView fx:id="dPrimeTable" prefHeight="369.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="dUpColumn" prefWidth="164.0" text="Верхняя граница" />
+          <TableColumn fx:id="dDownColumn" prefWidth="152.0" text="Нижняя граница" />
+            <TableColumn fx:id="dAccuracyColumn" prefWidth="145.0" text="Шаг" />
+            <TableColumn fx:id="dResolveColumn" prefWidth="251.0" text="Результат" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="492.0" spacing="10.0">
+         <children>
+            <Button fx:id="dAddButton" mnemonicParsing="false" onMouseClicked="#onActionAdd" prefHeight="25.0" prefWidth="100.0" text="Добавить" />
+            <Button fx:id="dDeleteButton" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onActionDelete" text="Удалить" />
+            <Button fx:id="dResolveButton" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onActionResolve" text="Вычислить" />
+            <Button fx:id="dClearButton" mnemonicParsing="false" onMouseClicked="#onActionClear" text="Очистить" />
+            <Button fx:id="dFillButton" mnemonicParsing="false" onMouseClicked="#onActionFill" text="Заполнить" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="500.0" spacing="10.0">
+         <children>
+            <Button fx:id="dOutputTextButton" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onClickedOutputText" text="Выгрузить текст" />
+            <Button fx:id="dInputTextButton" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onClickedInputText" text="Загрузить текст" />
+            <Button fx:id="dOutputStreamButton" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onClickedOutputStream" text="Выгрузить поток" />
+            <Button fx:id="dInputStreamButton" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onClickedInputStream" text="Загрузить поток" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
